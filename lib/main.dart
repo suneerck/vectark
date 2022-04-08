@@ -135,14 +135,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         const EdgeInsets.only(top: 60, left: 20, right: 20),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const SecondPage(),
-                          ),
-                        );
-                        if (usernameController.text == '') {
-                          if (passwordController.text == '') {}
+                        if (usernameController.text == 'admin@gmail.com') {
+                          if (passwordController.text == '12345') {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SecondPage(),
+                              ),
+                            );
+                          }
                         }
                       },
                       child: const Text(
@@ -200,7 +201,7 @@ class SecondPage extends StatelessWidget {
                   child: TextButton(
                     onPressed: () {},
                     child: const Text(
-                      'SignUp',
+                      'Register',
                       style: TextStyle(color: Colors.white),
                     ),
                     style: ButtonStyle(
